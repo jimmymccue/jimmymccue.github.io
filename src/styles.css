@@ -1,10 +1,3 @@
-@media only screen and (max-width: 1000px) {
-    .project-container {
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
-
 section {
     background-color: white;
 }
@@ -42,7 +35,6 @@ ul.show {
 }
 
 li {
-    width: 200px;
     text-decoration: none;
 }
 
@@ -134,11 +126,19 @@ p {
     width: 300px;
     height: 500px;
     box-shadow: 5px 5px 20px lightgray;
+    margin: 10px;
 }
 
 .project-container {
     display: flex;
     justify-content: space-around;
+}
+
+@media only screen and (max-width: 1000px) {
+    .project-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .project-image {
@@ -167,12 +167,23 @@ rect {
 }
 
 .hamburger {
-    border: 0;
-    background-color: transparent;
-    color: white;
-    font-size: 30px;
+    display: none;
+    
 }
 
- {
-    
+.hamburger:focus {
+    outline: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    .hamburger {
+        display: block;
+        border: 0;
+        background-color: transparent;
+        font-size: 30px;
+    }
+
+    ul {
+        display: none;
+    }
 }
